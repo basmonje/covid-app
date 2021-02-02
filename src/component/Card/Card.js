@@ -27,8 +27,8 @@ export default function Card(props) {
         }
 
         h1 {
-          font-size: 2rem;
-          font-weight: 400;
+          font-size: 1.6rem;
+          font-weight: 600;
           margin-bottom: 1rem;
         }
 

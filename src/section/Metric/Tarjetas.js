@@ -15,7 +15,7 @@ export default function Comunas(props) {
               <Card
                 key={complete_name}
                 label={complete_name}
-                value={activos.value}
+                value={`Activos ${activos.value}`}
                 tooltip={activos.date}
               />
             ))}

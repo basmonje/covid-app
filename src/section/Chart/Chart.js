@@ -21,8 +21,9 @@ export default function Chart(props) {
                 {
                   label: "# Casos activos",
                   data: chartValue,
-                  backgroundColor: ["#98abf8"],
-                  borderColor: ["#98abf8"],
+                  fill: true,
+                  backgroundColor: "rgba(75,192,192,0.2)",
+                  borderColor: "rgba(75,192,192,1)",
                   borderWidth: 3,
                   pointBackgroundColor: "transparent",
                   pointBorderColor: "#FFF0",
@@ -35,7 +36,7 @@ export default function Chart(props) {
       </Container>
       <style jsx>{`
         .chart-card {
-          padding: 2rem 4rem;
+          padding: 2rem 1rem;
           border: 5px solid #333;
           border-radius: 8px;
           background: #e3f6f5;
