@@ -8,7 +8,7 @@ export default function Navbar() {
       <Container>
         <nav className="nav">
           <div className="logo">
-            <p>Logo</p>
+            <p>covid19</p>
           </div>
           <div className="menu">
             <ul>
@@ -24,7 +24,7 @@ export default function Navbar() {
       <style jsx>{`
         .navbar {
           width: 100%;
-          background: #98acf8;
+          background: #1b262c;
         }
 
         .nav {
@@ -39,9 +39,13 @@ export default function Navbar() {
           align-items: center;
         }
 
+        .nav .logo p {
+          color: #ddd;
+        }
         li a {
           padding: 1rem 2rem;
           font-weight: 600;
+          color: #ddd;
         }
       `}</style>
     </header>

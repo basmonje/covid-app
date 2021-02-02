@@ -3,16 +3,18 @@ import Hero from "../src/section/Hero";
 import Metric from "../src/section/Metric";
 import { useCorona } from "../src/api/corona";
 import Chart from "../src/section/Chart";
+import SEO from "../src/section/SEO";
 
 export default function Home({ data }) {
   return (
     <div className="home">
+      <SEO />
       <Container>
-        <Text title="Corona Virus en Chile" />
+        <Text title="Covid en Chile" />
       </Container>
       <Hero data={data} />
       <Chart data={data.series.activos} />
-      <Metric data={data.regiones} />
+      <Metric data={data} />
     </div>
   );
 }

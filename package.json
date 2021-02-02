@@ -12,6 +12,7 @@
   "dependencies": {
     "camelcase-keys": "^6.2.2",
     "chart.js": "^2.9.4",
+    "lodash": "^4.17.20",
     "moment": "^2.29.1",
     "moment-timezone": "^0.5.32",
     "next": "^10.0.6",

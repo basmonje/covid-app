@@ -5,7 +5,7 @@ export default function Card(props) {
   const [active, setActive] = useState(false);
 
   return (
-    <div className={`card shadow-row ${className || ""}`}>
+    <div className={`card ${className || ""}`}>
       <h1>{label}</h1>
       <span>{value}</span>
       <div
@@ -20,8 +20,10 @@ export default function Card(props) {
           border: none;
           border-radius: 8px;
           padding: 2rem;
+          background: #e3f6f5;
           position: relative;
-          color: #fff;
+          color: #333;
+          border: 5px solid #333;
         }
 
         h1 {
@@ -39,7 +41,6 @@ export default function Card(props) {
           position: absolute;
           border: none;
           border-radius: 50%;
-          background: #d44;
           top: 3px;
           right: 3px;
           font-size: 0.6rem;

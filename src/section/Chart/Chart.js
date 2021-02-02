@@ -10,11 +10,10 @@ export default function Chart(props) {
   const chartDate = props.data.map(({ date }) => {
     return date;
   });
-  console.log(chartDate);
   return (
     <div className="chart-cont padding-top">
       <Container>
-        <div className="chart-card shadow-row">
+        <div className="chart-card">
           <Line
             data={{
               labels: chartDate,
@@ -37,8 +36,9 @@ export default function Chart(props) {
       <style jsx>{`
         .chart-card {
           padding: 2rem 4rem;
-          border: none;
+          border: 5px solid #333;
           border-radius: 8px;
+          background: #e3f6f5;
         }
       `}</style>
     </div>

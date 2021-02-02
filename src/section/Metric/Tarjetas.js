@@ -1,19 +1,24 @@
 import React from "react";
 import { Container, Grid, Card } from "../../component";
+import _ from "lodash";
 
 export default function Comunas(props) {
   const { data } = props;
-  const array = [data];
+  const regionesData = _.values(data.regiones);
   return (
     <div className="tarjetas">
       <Container>
         <h1>Regiones</h1>
         <Grid>
-          <Card
-            label="Antofagasta"
-            value={data.Antofagasta.activos.value}
-            tooltip={data.Antofagasta.activos.date}
-          />
+          {regionesData &&
+            regionesData.map(({ complete_name, activos }) => (
+              <Card
+                key={complete_name}
+                label={complete_name}
+                value={activos.value}
+                tooltip={activos.date}
+              />
+            ))}
         </Grid>
       </Container>
       <style jsx>{`

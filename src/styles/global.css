@@ -6,8 +6,12 @@
     Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
 
+body {
+  background: #fbfbfb;
+}
+
 .padding-top {
-  padding-top: 100px;
+  padding-top: 70px;
 }
 
 a {
