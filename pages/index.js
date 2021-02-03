@@ -8,7 +8,7 @@ import SEO from "../src/section/SEO";
 export default function Home({ data }) {
   return (
     <div className="home">
-      <SEO />
+      <SEO color="#1b262c" />
       <Container>
         <Text title="Covid en Chile" />
       </Container>

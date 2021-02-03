@@ -1,9 +1,10 @@
 import Head from "next/head";
 import { getSiteMetaData } from "../../utils/helpers";
 
-export default function SEO({ title, description = "" }) {
+export default function SEO({ title, description = "", color = "#12141d" }) {
   const siteMetadata = getSiteMetaData();
   const metaDescription = description || siteMetadata.description;
+  const themeColor = color;
 
   return (
     <Head>
@@ -20,6 +21,7 @@ export default function SEO({ title, description = "" }) {
       />
       <meta name="twitter:card" content="summary" />
       <meta name="twitter:title" content={title} />
+      <meta name="theme-color" content={themeColor} />
       <meta name="twitter:description" content={metaDescription} />
       <meta name="twitter:creator" content={siteMetadata.social.twitter} />
     </Head>

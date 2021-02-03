@@ -39,9 +39,18 @@ export default function Navbar() {
           align-items: center;
         }
 
+        .nav .logo:hover {
+          cursor: pointer;
+        }
+
         .nav .logo p {
           color: #ddd;
         }
+
+        .menu {
+          display: none;
+        }
+
         li a {
           padding: 1rem 2rem;
           font-weight: 600;
