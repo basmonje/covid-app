@@ -12,6 +12,15 @@ export default function Title({ title }) {
           margin-bottom: 1rem;
           border-radius: 8px;
         }
+
+        .card-title:hover {
+          transform: scale(1.02);
+          transition: all 100ms;
+        }
+
+        .card-title > h1 {
+          color: #333;
+        }
       `}</style>
     </div>
   );
