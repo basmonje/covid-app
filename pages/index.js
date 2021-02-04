@@ -9,9 +9,6 @@ export default function Home({ data }) {
   return (
     <div className="home">
       <SEO color="#1b262c" />
-      <Container>
-        <Text title="Covid en Chile" />
-      </Container>
       <Hero data={data} />
       <Chart data={data.series.activos} />
       <Metric data={data} />

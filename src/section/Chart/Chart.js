@@ -11,7 +11,7 @@ export default function Chart(props) {
     return date;
   });
   return (
-    <div className="chart-cont padding-top">
+    <div className="chart-cont">
       <Container>
         <div className="chart-card">
           <Line
@@ -39,6 +39,7 @@ export default function Chart(props) {
           padding: 2rem 1rem;
           border: 5px solid #333;
           border-radius: 8px;
+          margin-top: 1.4rem;
           background: #e3f6f5;
         }
       `}</style>

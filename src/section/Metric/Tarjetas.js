@@ -1,6 +1,7 @@
 import React from "react";
 import { Container, Grid, Card } from "../../component";
 import _ from "lodash";
+import TitleCard from "../../component/Card/Title";
 
 export default function Comunas(props) {
   const { data } = props;
@@ -8,7 +9,7 @@ export default function Comunas(props) {
   return (
     <div className="tarjetas">
       <Container>
-        <h1>Regiones</h1>
+        <TitleCard title="Regiones" />
         <Grid>
           {regionesData &&
             regionesData.map(({ complete_name, activos }) => (

@@ -1,5 +1,6 @@
 import React from "react";
 import { Container, Card, Grid } from "../../component";
+import TitleCard from "../../component/Card/Title";
 
 export default function Hero(props) {
   const { data } = props;
@@ -7,7 +8,7 @@ export default function Hero(props) {
   return (
     <div className="hero padding-top">
       <Container>
-        <h1 className="title">Casos en todo Chile</h1>
+        <TitleCard title="Casos en todo Chile" />
         <Grid>
           <Card
             label="Activos"

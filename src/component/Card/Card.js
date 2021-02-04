@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Information } from "../Icons";
 
 export default function Card(props) {
   const { className, label, value, tooltip } = props;
@@ -8,14 +9,18 @@ export default function Card(props) {
     <div className={`card ${className || ""}`}>
       <h1>{label}</h1>
       <span>{value}</span>
+
       <div
+        className="information-alert"
         onMouseOver={() => setActive(true)}
         onMouseOut={() => setActive(false)}
-      />
-      {active && <Nube tooltip={`Ultima actualizacion ${tooltip}`} />}
+      >
+        <Information />
+      </div>
+      {active && <Nube tooltip={`última actualización ${tooltip}`} />}
       <style jsx>{`
         .card {
-          width: 100%;
+          width: 100%;  𕙔
           height: 100%;
           border: none;
           border-radius: 8px;
@@ -49,6 +54,14 @@ export default function Card(props) {
         div:hover {
           cursor: pointer;
         }
+
+        .information-alert {
+          color: #f8dc81;
+        }
+
+        .information-alert:hover {
+          color: #d44;
+        }
       `}</style>
     </div>
   );
@@ -62,17 +75,20 @@ function Nube(props) {
         .nube {
           z-index: 1;
           position: absolute;
-          width: 100%;
+          width: 50%;
           padding: 1rem;
-          bottom: 0;
-          right: 0;
-          background: #d44;
-          border: none;
+          bottom: -10px;
+          right: -10px;
+          background: #ffee93;
+          border: 4px solid;
           border-radius: 8px;
+          transition: all 500ms ease;
         }
 
         p {
           color: #333;
+          font-weight: 600;
+          font-size: 1rem;
         }
       `}</style>{" "}
     </div>

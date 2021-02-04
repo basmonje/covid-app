@@ -1,14 +1,17 @@
 import React from "react";
 import Link from "next/link";
 import { Container } from "../../component";
+import ThemeMode from "./ThemeMode";
 
 export default function Navbar() {
   return (
-    <header className="navbar">
+    <div className="navbar">
       <Container>
         <nav className="nav">
           <div className="logo">
-            <p>covid19</p>
+            <a href="https://basmonje.work">
+              <p>basmonje</p>
+            </a>
           </div>
           <div className="menu">
             <ul>
@@ -19,12 +22,15 @@ export default function Navbar() {
               </li>
             </ul>
           </div>
+          <div className="mode">
+            <ThemeMode />
+          </div>
         </nav>
       </Container>
       <style jsx>{`
         .navbar {
           width: 100%;
-          background: #1b262c;
+          background: transparent;
         }
 
         .nav {
@@ -44,7 +50,13 @@ export default function Navbar() {
         }
 
         .nav .logo p {
-          color: #ddd;
+          color: #333;
+          font-weight: 600;
+        }
+
+        .nav .logo p:hover {
+          transition: all 200ms linear;
+          transform: scale(1.1);
         }
 
         .menu {
@@ -57,6 +69,6 @@ export default function Navbar() {
           color: #ddd;
         }
       `}</style>
-    </header>
+    </div>
   );
 }
