@@ -57,12 +57,13 @@ export default function Navigation(props) {
           margin-right: 1rem;
           background: #fff3b2;
           padding: 1rem 2rem;
-          border: 5px solid #333;
           border-radius: 7px;
+          box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
         }
 
         .navigator .menu ul li:hover {
           cursor: pointer;
+          background: #f5d782;
         }
 
         .navigator .menu ul li a {

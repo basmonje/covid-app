@@ -28,14 +28,15 @@ export default function Card(props) {
           background: #e3f6f5;
           position: relative;
           color: #333;
-          border: 5px dotted #3339;
-          transition: all 1s ease-in-out;
+          border: 1px solid #3336;
+          transition: all 300ms ease-in-out;
         }
 
         .card:hover {
-          transition: all 500ms ease-in;
-          border: 5px dotted #333;
-          transform: translate(0, -10px);
+          transition: all 300ms ease-in;
+          border: 1px solid #333;
+          transform: translate(0, -8px);
+          box-shadow: 0 3px 3px rgba(0,0,0,0.2);
         }
 
         h1 {
