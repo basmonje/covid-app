@@ -28,11 +28,11 @@ export default function ThemeMode() {
       <style jsx>{`
         .thememode {
           margin-right: 0.6rem;
-          color: #f6f6f680;
+          color: #3339;
         }
 
         .thememode:hover {
-          color: #f6f6f6;
+          color: #333;
           transition: all 250ms;
           transform: scale(1.1);
         }

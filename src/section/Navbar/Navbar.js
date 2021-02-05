@@ -31,6 +31,8 @@ export default function Navbar() {
         .navbar {
           width: 100%;
           background: transparent;
+          z-index: 999999;
+          position: relative;
         }
 
         .nav {
