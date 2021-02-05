@@ -28,7 +28,14 @@ export default function Card(props) {
           background: #e3f6f5;
           position: relative;
           color: #333;
-          border: 5px solid #333;
+          border: 5px dotted #3339;
+          transition: all 1s ease-in-out;
+        }
+
+        .card:hover {
+          transition: all 500ms ease-in;
+          border: 5px dotted #333;
+          transform: translate(0, -10px);
         }
 
         h1 {
@@ -56,6 +63,7 @@ export default function Card(props) {
         }
 
         .information-alert {
+          transition: all 500ms ease-in-out;
           color: #f8dc81;
         }
 

@@ -1,7 +1,7 @@
 import { Container, Text } from "../src/component";
+import { useCorona } from "../src/api/corona";
 import Hero from "../src/section/Hero";
 import Metric from "../src/section/Metric";
-import { useCorona } from "../src/api/corona";
 import Chart from "../src/section/Chart";
 import SEO from "../src/section/SEO";
 

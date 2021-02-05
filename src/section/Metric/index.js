@@ -1,1 +1,1 @@
-export { default } from "./Tarjetas";
+export { default } from "./Metric";

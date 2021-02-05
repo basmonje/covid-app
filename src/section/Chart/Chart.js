@@ -37,7 +37,7 @@ export default function Chart(props) {
       <style jsx>{`
         .chart-card {
           padding: 2rem 1rem;
-          border: 5px solid #333;
+          border: 5px dotted #333;
           border-radius: 8px;
           margin-top: 1.4rem;
           background: #e3f6f5;

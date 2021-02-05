@@ -1,7 +1,6 @@
 import React from "react";
 import Navbar from "../Navbar";
 import { Container } from "../../component";
-import { Virus, Viruses } from "../../component/Icons";
 
 export default function Header() {
   return (
@@ -13,17 +12,10 @@ export default function Header() {
           <p>Página en construcción.</p>
         </div>
       </Container>
-      <div className="blob">
-        <Virus />
-      </div>
-      <div className="bloright">
-        <Viruses />
-      </div>
       <style jsx>{`
         .header {
-          background: #eeeeee;
+          background: #e8e8e8;
           padding-bottom: 100px;
-          position: relative;
         }
 
         .text {

@@ -3,7 +3,7 @@ import React from "react";
 export default function Container(props) {
   return (
     <div className={`container ${props.className || ""}`}>
-      {props.children}{" "}
+      {props.children}
       <style jsx>{`
         .container {
           width: 100%;
