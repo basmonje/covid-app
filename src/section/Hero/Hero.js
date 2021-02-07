@@ -17,16 +17,19 @@ export default function Hero(props) {
               label="Activos"
               value={data.activos.value}
               tooltip={data.activos.date}
+              type="hero"
             />
             <Card
               label="Confirmados"
               value={data.confirmados.value}
               tooltip={data.confirmados.date}
+              type="hero"
             />
             <Card
               label="Fallecidos"
               value={data.fallecidos.value}
               tooltip={data.fallecidos.date}
+              type="hero"
             />
           </Grid>
         </Container>

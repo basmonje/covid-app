@@ -1,14 +1,20 @@
 import React from "react";
-import { getRegionBySlug, useCorona } from "../../src/api/corona";
+import { getRegionBySlug, useCorona } from "../../../src/api/corona";
 import _ from "lodash";
-import Hero from "../../src/section/Hero";
-import Metric from "../../src/section/Metric";
+import Hero from "../../../src/section/Hero";
+import Metric from "../../../src/section/Metric";
 
 export default function Region({ response }) {
+  // console.log("region0", response);
   return (
     <div>
       <Hero data={response} title={response.complete_name} />
-      <Metric data={response.comunas} type="comunas" title="Comunas" />
+      <Metric
+        data={response.comunas}
+        type="comunas"
+        title="Comunas"
+        region={response.slug}
+      />
     </div>
   );
 }

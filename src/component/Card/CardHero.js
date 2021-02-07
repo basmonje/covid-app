@@ -1,18 +1,14 @@
 import React, { useState } from "react";
+import Modal from "./Modal";
 import { Information } from "../Icons";
-import Link from "next/link";
 
-export default function Card(props) {
-  const { className, label, value, tooltip, slug } = props;
+export default function CardHero(props) {
+  const { className, label, value, tooltip, slug, region } = props;
   const [active, setActive] = useState(false);
 
   return (
     <div className={`card ${className || ""}`}>
-      <h1>
-        <Link href={"region/[slug].js"} as={`/region/${slug}`}>
-          {label}
-        </Link>
-      </h1>
+      <h1>{label}</h1>
       <span>{value}</span>
 
       <div
@@ -22,7 +18,7 @@ export default function Card(props) {
       >
         <Information />
       </div>
-      {active && <Nube tooltip={`Última actualización ${tooltip}`} />}
+      {active && <Modal tooltip={`Última actualización ${tooltip}`} />}
       <style jsx>{`
         .card {
           width: 100%;  𕙔
@@ -77,42 +73,6 @@ export default function Card(props) {
           color: #d44;
         }
       `}</style>
-    </div>
-  );
-}
-
-function LinkRegion() {
-  return (
-    <Link href={"region/[slug].js"} as={`/region/${slug}`}>
-      {label}
-    </Link>
-  );
-}
-
-function Nube(props) {
-  return (
-    <div className="nube">
-      <p>{props.tooltip}</p>
-      <style jsx>{`
-        .nube {
-          z-index: 1;
-          position: absolute;
-          width: 50%;
-          padding: 1rem;
-          bottom: -10px;
-          right: -10px;
-          background: #ffee93;
-          border: 4px solid;
-          border-radius: 8px;
-          transition: all 500ms ease;
-        }
-
-        p {
-          color: #333;
-          font-weight: 600;
-          font-size: 0.8rem;
-        }
-      `}</style>{" "}
     </div>
   );
 }

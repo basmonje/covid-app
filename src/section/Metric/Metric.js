@@ -4,8 +4,8 @@ import _ from "lodash";
 import TitleCard from "../../component/Card/Title";
 import { Element } from "react-scroll";
 
-export default function Comunas({ data, type, title = "Regiones" }) {
-  console.log(data);
+export default function Comunas(props) {
+  const { data, type, title = "Regiones", region } = props;
   return (
     <div className="tarjetas">
       <Element name="regiones">
@@ -14,7 +14,7 @@ export default function Comunas({ data, type, title = "Regiones" }) {
           {type == "home" ? (
             <CardListHome data={data} />
           ) : (
-            <CardListRegiones data={data} />
+            <CardListRegiones data={data} region={region} />
           )}
         </Container>
       </Element>
@@ -38,6 +38,7 @@ function CardListHome({ data }) {
       {data &&
         data.map(({ complete_name, activos, slug }) => (
           <Card
+            type="home"
             key={complete_name}
             label={complete_name}
             value={`Activos ${activos.value}`}
@@ -49,7 +50,7 @@ function CardListHome({ data }) {
   );
 }
 
-function CardListRegiones({ data }) {
+function CardListRegiones({ data, region }) {
   return (
     <Grid>
       {data &&
@@ -60,6 +61,8 @@ function CardListRegiones({ data }) {
             value={`Activos ${activos.value}`}
             tooltip={activos.date}
             slug={slug}
+            type="region"
+            region={region}
           />
         ))}
     </Grid>
