@@ -29,11 +29,29 @@ export default function Navigation(props) {
       <Container>
         <div className="menu">
           <ul>
-            <li onClick={() => handleTravel({ name: "hero" })}>
-              <span>Chile</span>
+            <li>
+              <Link
+                smooth={true}
+                offset={-100}
+                activeClass="active"
+                spy={true}
+                to="hero"
+                className="button-dead"
+              >
+                Chile
+              </Link>
             </li>
-            <li onClick={() => handleTravel({ name: "regiones" })}>
-              <span>Regiones</span>
+            <li>
+              <Link
+                smooth={true}
+                offset={-100}
+                activeClass="active"
+                spy={true}
+                to="regiones"
+                className="button-dead"
+              >
+                Regiones
+              </Link>
             </li>
           </ul>
         </div>
@@ -43,8 +61,8 @@ export default function Navigation(props) {
           width: 100%;
           position: sticky;
           z-index: 99;
-          top: 20px;
-          margin-top: 1rem;
+          top: 40px;
+          margin-top: 2rem;
         }
 
         .navigator .menu ul {
@@ -55,29 +73,6 @@ export default function Navigation(props) {
 
         .navigator .menu ul li {
           margin-right: 1rem;
-          background: #fff3b2;
-          padding: 1rem 2rem;
-          border-radius: 7px;
-          box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
-        }
-
-        .navigator .menu ul li:hover {
-          cursor: pointer;
-          background: #f5d782;
-        }
-
-        .navigator .menu ul li a {
-          color: #ddd !important;
-        }
-
-        .hidden-sleep {
-          display: none;
-        }
-
-        @media (min-width: 676px) {
-          .hidden-sleep {
-            display: block;
-          }
         }
       `}</style>
     </div>

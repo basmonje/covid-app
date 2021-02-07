@@ -21,9 +21,6 @@ body.dark-mode {
 body.dark-mode .header {
   background: #13161f;
 }
-body.dark-mode .navigator .menu ul li {
-  background: #ff5e78 !important;
-}
 
 body.dark-mode .navbar .logo p {
   color: #ddd !important;
@@ -47,6 +44,19 @@ body.dark-mode .thememode {
 
 body.dark-mode .thememode:hover {
   color: #ddd;
+}
+
+body.dark-mode .information p {
+  color: #ddd !important;
+  font-size: 1.4rem;
+}
+
+body.dark-mode .information p a {
+  color: #ddd9 !important;
+}
+
+body.dark-mode .information p a:hover {
+  color: #ddd !important;
 }
 
 a {
@@ -156,3 +166,23 @@ li {
   }
 }
 */
+
+.button-dead {
+  padding: 1rem 2rem;
+  font-weight: 600;
+  font-size: 1rem;
+  background: #bbdfc8;
+  border: none;
+  border-radius: 25px;
+  box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
+}
+
+.button-dead:hover {
+  padding: 1rem 2rem;
+  background: #bbdfc8;
+  cursor: pointer;
+}
+
+.button-dead.active {
+  background: #75cfb8;
+}

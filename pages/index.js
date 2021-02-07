@@ -2,16 +2,17 @@ import { Container, Text } from "../src/component";
 import { useCorona } from "../src/api/corona";
 import Hero from "../src/section/Hero";
 import Metric from "../src/section/Metric";
-import Chart from "../src/section/Chart";
+import Navigator from "../src/section/Navbar/Navigation";
 import SEO from "../src/section/SEO";
-
+import Information from "../src/section/Information";
 export default function Home({ data }) {
   return (
     <div className="home">
       <SEO color="#1b262c" />
+      <Information />
+      <Navigator />
       <Hero data={data} />
-      <Chart data={data.series.activos} />
-      <Metric data={data} />
+      <Metric data={data.regiones} type="home" />
     </div>
   );
 }
@@ -21,6 +22,6 @@ export async function getStaticProps(context) {
   return {
     props: {
       data: response,
-    }, // will be passed to the page component as props
+    },
   };
 }

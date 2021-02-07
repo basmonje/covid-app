@@ -4,25 +4,18 @@ import _ from "lodash";
 import TitleCard from "../../component/Card/Title";
 import { Element } from "react-scroll";
 
-export default function Comunas(props) {
-  const { data } = props;
-  const regionesData = _.values(data.regiones);
+export default function Comunas({ data, type, title = "Regiones" }) {
+  console.log(data);
   return (
     <div className="tarjetas">
       <Element name="regiones">
         <Container>
-          <TitleCard title="Regiones" />
-          <Grid>
-            {regionesData &&
-              regionesData.map(({ complete_name, activos }) => (
-                <Card
-                  key={complete_name}
-                  label={complete_name}
-                  value={`Activos ${activos.value}`}
-                  tooltip={activos.date}
-                />
-              ))}
-          </Grid>
+          <TitleCard title={title} />
+          {type == "home" ? (
+            <CardListHome data={data} />
+          ) : (
+            <CardListRegiones data={data} />
+          )}
         </Container>
       </Element>
       <style jsx>{`
@@ -36,5 +29,39 @@ export default function Comunas(props) {
         }
       `}</style>
     </div>
+  );
+}
+
+function CardListHome({ data }) {
+  return (
+    <Grid>
+      {data &&
+        data.map(({ complete_name, activos, slug }) => (
+          <Card
+            key={complete_name}
+            label={complete_name}
+            value={`Activos ${activos.value}`}
+            tooltip={activos.date}
+            slug={slug}
+          />
+        ))}
+    </Grid>
+  );
+}
+
+function CardListRegiones({ data }) {
+  return (
+    <Grid>
+      {data &&
+        data.map(({ name, activos, slug }) => (
+          <Card
+            key={name}
+            label={name}
+            value={`Activos ${activos.value}`}
+            tooltip={activos.date}
+            slug={slug}
+          />
+        ))}
+    </Grid>
   );
 }

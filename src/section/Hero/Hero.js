@@ -2,15 +2,16 @@ import React from "react";
 import { Element } from "react-scroll";
 import { Container, Card, Grid } from "../../component";
 import TitleCard from "../../component/Card/Title";
+import Chart from "../Chart";
 
 export default function Hero(props) {
-  const { data } = props;
+  const { data, title = "Casos en todo Chile" } = props;
 
   return (
     <div className="hero padding-top">
       <Element name="hero">
         <Container>
-          <TitleCard title="Casos en todo Chile" />
+          <TitleCard title={title} />
           <Grid>
             <Card
               label="Activos"
@@ -29,6 +30,7 @@ export default function Hero(props) {
             />
           </Grid>
         </Container>
+        <Chart data={data.series.activos} />
       </Element>
       <style jsx>{`
         .hero {

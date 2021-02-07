@@ -1,13 +1,18 @@
 import React, { useState } from "react";
 import { Information } from "../Icons";
+import Link from "next/link";
 
 export default function Card(props) {
-  const { className, label, value, tooltip } = props;
+  const { className, label, value, tooltip, slug } = props;
   const [active, setActive] = useState(false);
 
   return (
     <div className={`card ${className || ""}`}>
-      <h1>{label}</h1>
+      <h1>
+        <Link href={"region/[slug].js"} as={`/region/${slug}`}>
+          {label}
+        </Link>
+      </h1>
       <span>{value}</span>
 
       <div
@@ -17,7 +22,7 @@ export default function Card(props) {
       >
         <Information />
       </div>
-      {active && <Nube tooltip={`última actualización ${tooltip}`} />}
+      {active && <Nube tooltip={`Última actualización ${tooltip}`} />}
       <style jsx>{`
         .card {
           width: 100%;  𕙔
@@ -76,6 +81,14 @@ export default function Card(props) {
   );
 }
 
+function LinkRegion() {
+  return (
+    <Link href={"region/[slug].js"} as={`/region/${slug}`}>
+      {label}
+    </Link>
+  );
+}
+
 function Nube(props) {
   return (
     <div className="nube">
@@ -97,7 +110,7 @@ function Nube(props) {
         p {
           color: #333;
           font-weight: 600;
-          font-size: 1rem;
+          font-size: 0.8rem;
         }
       `}</style>{" "}
     </div>
