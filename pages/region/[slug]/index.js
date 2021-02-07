@@ -8,7 +8,7 @@ export default function Region({ response }) {
   // console.log("region0", response);
   return (
     <div>
-      <Hero data={response} title={response.complete_name} />
+      <Hero data={response} region={response.complete_name} />
       <Metric
         data={response.comunas}
         type="comunas"

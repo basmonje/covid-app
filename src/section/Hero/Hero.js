@@ -1,17 +1,23 @@
 import React from "react";
 import { Element } from "react-scroll";
 import { Container, Card, Grid } from "../../component";
-import TitleCard from "../../component/Card/Title";
+import Breadcrumb from "../../component/Breadcrumb";
 import Chart from "../Chart";
 
 export default function Hero(props) {
-  const { data, title = "Casos en todo Chile" } = props;
+  const { data, title = "Chile", region, comuna } = props;
+
+  const utils = {
+    chile: title,
+    region: region,
+    comuna: comuna,
+  };
 
   return (
     <div className="hero padding-top">
       <Element name="hero">
         <Container>
-          <TitleCard title={title} />
+          <Breadcrumb data={utils} />
           <Grid>
             <Card
               label="Activos"

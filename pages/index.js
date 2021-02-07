@@ -12,7 +12,7 @@ export default function Home({ data }) {
       <SEO color="#1b262c" />
       <Information />
       <Navigator />
-      <Hero data={data} />
+      <Hero title="Chile" data={data} />
       <Metric data={data.regiones} type="home" />
     </div>
   );

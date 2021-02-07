@@ -9,8 +9,8 @@ export default function Navbar() {
       <Container>
         <nav className="nav">
           <div className="logo">
-            <a href="https://basmonje.work">
-              <p>basmonje</p>
+            <a href="/">
+              <p>covid-19</p>
             </a>
           </div>
           <div className="menu">

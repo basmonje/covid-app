@@ -59,6 +59,17 @@ body.dark-mode .information p a:hover {
   color: #ddd !important;
 }
 
+body.dark-mode footer a {
+  color: #ddd !important;
+}
+
+body.dark-mode footer a:hover {
+  color: #75cfb8 !important;
+}
+
+body.dark-mode footer span {
+  color: #ddd !important;
+}
 a {
   text-decoration: none;
   color: #333;
@@ -185,4 +196,14 @@ li {
 
 .button-dead.active {
   background: #75cfb8;
+}
+
+.front {
+  display: none;
+}
+
+@media (min-width: 767px) {
+  .front {
+    display: block;
+  }
 }

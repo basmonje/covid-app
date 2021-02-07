@@ -4,7 +4,11 @@ import { getComunasBySlugAndRegion } from "../../../src/api/corona";
 import Hero from "../../../src/section/Hero";
 
 export default function Comuna({ data }) {
-  return <div>{data && <Hero data={data} title={data.name} />}</div>;
+  return (
+    <div>
+      {data && <Hero data={data} comuna={data.name} region={data.region} />}
+    </div>
+  );
 }
 
 export async function getServerSideProps(context) {

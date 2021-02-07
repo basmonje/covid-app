@@ -36,7 +36,7 @@ export default function CardHero(props) {
         .card:hover {
           transition: all 300ms ease-in;
           border: 1px solid #333;
-          transform: translate(0, -8px);
+          transform: translate(0, -5px);
           box-shadow: 0 3px 3px rgba(0,0,0,0.2);
         }
 
