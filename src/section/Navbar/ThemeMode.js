@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import useMode from "use-dark-mode";
 import { Moon, Sun } from "../../component/Icons";
+
 export default function ThemeMode() {
   const [darkMode, setDarkMode] = useState(false);
   const { value, toggle } = useMode(false);
@@ -35,6 +36,7 @@ export default function ThemeMode() {
           color: #333;
           transition: all 250ms;
           transform: scale(1.1);
+          cursor: pointer;
         }
       `}</style>
     </div>

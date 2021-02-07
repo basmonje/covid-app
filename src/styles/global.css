@@ -207,3 +207,9 @@ li {
     display: block;
   }
 }
+
+.up-w:hover {
+  cursor: pointer;
+  transition: all 300ms ease;
+  transform: translate(0px, -10px);
+}

@@ -17,7 +17,7 @@ export default function Information() {
             Covid-19.
           </p>
           <p>
-            Los datos obtenidos desde el Ministerio de salud son procesadas por{" "}
+            Los datos obtenidos desde el Ministerio de salud son procesados por{" "}
             <a href="https://github.com/javierlopeza/datos-coronavirus-chile">
               javierlopeza/datos-coronavirus-chile
             </a>

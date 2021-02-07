@@ -1,6 +1,6 @@
 export default {
   siteMetadata: {
-    title: "Casos confirmados en Chile",
+    title: "sigue la evolución de la pandemia en Chile.",
     author: {
       name: "Bastian Monje",
       summary: "Projecto",

@@ -7,9 +7,13 @@ import SEO from "../src/section/SEO";
 import Information from "../src/section/Information";
 
 export default function Home({ data }) {
+  console.log(data);
   return (
     <div className="home">
-      <SEO color="#1b262c" />
+      <SEO
+        color="#1b262c"
+        title={`Total de activos en Chile ${data.activos.value}`}
+      />
       <Information />
       <Navigator />
       <Hero title="Chile" data={data} />
