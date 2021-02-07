@@ -1,28 +1,18 @@
 import React from "react";
+import { getRegionBySlug, useCorona } from "../../../src/api/corona";
 
 export default function Comunas() {
-  return <div></div>;
-}
-
-export async function getStaticPaths() {
-  let paths = await useCorona();
-
-  paths = paths.regiones.map((post) => ({
-    params: { slug: post.slug },
-  }));
-
-  return {
-    paths: paths,
-    fallback: false,
-  };
+  return (
+    <div>
+      <h1>Comunas</h1>
+    </div>
+  );
 }
 
 export async function getStaticProps(context) {
-  console.log(context);
-  const response = await getRegionBySlug(context.params.slug);
   return {
     props: {
-      response,
+      response: "nuevo",
     },
   };
 }

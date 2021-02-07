@@ -5,6 +5,7 @@ import Metric from "../src/section/Metric";
 import Navigator from "../src/section/Navbar/Navigation";
 import SEO from "../src/section/SEO";
 import Information from "../src/section/Information";
+
 export default function Home({ data }) {
   return (
     <div className="home">
