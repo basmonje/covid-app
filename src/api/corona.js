@@ -6,7 +6,6 @@ export async function useCorona() {
     const url =
       "https://raw.githubusercontent.com/javierlopeza/datos-coronavirus-chile/production/data/chile.json";
     const response = await fetch(url);
-    console.log(response);
     const result = await response.json();
     const data = FormatData(result);
     return data;
