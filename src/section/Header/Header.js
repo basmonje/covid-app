@@ -9,7 +9,6 @@ export default function Header() {
       <Container>
         <div className="text">
           <h1>Covid-19 en Chile</h1>
-          <p>Página en construcción.</p>
         </div>
       </Container>
       <style jsx>{`
