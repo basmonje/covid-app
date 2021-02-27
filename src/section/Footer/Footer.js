@@ -2,7 +2,6 @@ import React from "react";
 import { Container } from "../../component";
 import { animateScroll } from "react-scroll";
 import { ArrowUp, Github } from "../../component/Icons";
-import Link from "next/link";
 
 export default function Footer() {
   const handle = () => animateScroll.scrollToTop();

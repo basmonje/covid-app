@@ -2,14 +2,8 @@ import React, { useRef } from "react";
 import { Link, scroller } from "react-scroll";
 import { Container } from "../../component";
 
-export default function Navigation(props) {
+export default function Navigation() {
   const ref = useRef(null);
-
-  const handleButton = () => {
-    // ref.current.focus();
-    ref.current.style.background = "#3335";
-  };
-
   const handleTravel = ({ name, offset = -100 }) =>
     scroller.scrollTo(name, {
       duration: 600,
@@ -19,10 +13,6 @@ export default function Navigation(props) {
       activeClass: "active",
       spy: true,
     });
-
-  function handle(e) {
-    e.target.style.background = "red";
-  }
 
   return (
     <div className="navigator" ref={ref}>
